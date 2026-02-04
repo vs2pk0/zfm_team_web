@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const instance = axios.create({
-    baseURL: '/api',
+    baseURL: import.meta.env.PROD ? 'https://zmf.sb996.cn/api' : '/api',
     timeout: 10000
 });
 
